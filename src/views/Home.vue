@@ -40,30 +40,47 @@
       <!--modificar-->
       <div class="scroll-content">
         <!--<div :key="index" class="avatar" v-for="(item, index) in 10">-->
+
         <div class="avatar">
-          <i class="bx bxs-drink bx-sm"></i>
+          <a href="#indice1">
+            <i class="bx bxs-drink bx-sm"></i>
+          </a>
         </div>
         <div class="avatar">
-          <i class="bx bxs-coffee bx-sm"></i>
+          <a href="#indice2">
+            <i class="bx bxs-coffee bx-sm"></i>
+          </a>
         </div>
 
         <div class="avatar">
-          <i class="bx bx-dish bx-sm"></i>
+          <a href="#indice3">
+               <i class="bx bx-dish bx-sm"></i>
+          </a>
+         
         </div>
 
         <div class="avatar">
-          <i class="bx bx-cake bx-sm"></i>
+          <a href="#indice4">
+            <i class="bx bx-cake bx-sm"></i>
+          </a>
         </div>
+
+        
+
       </div>
     </div>
 
     <!--BEBIDAS FRÍAS-->
-    <h2>Bebidas Frías</h2>
+    <h2 id="indice1">Bebidas Frías</h2>
     <div class="scroll-menu">
       <!--modificar-->
       <div class="scroll-content">
         <!--<div :key="index" v-for="(item, index) in 10" class="top-products">-->
-        <div :key="indice" v-for="(frias,indice) in bFrias" class="top-products">
+        <div
+          :key="indice"
+          v-for="(frias, indice) in bFrias"
+          class="top-products"
+        >
           <div class="top-products-img">
             <img
               src="http://donaluisaxicotencatl.com/wp-content/uploads/2020/09/Menu-Dona-Luisa-Xicotencatl-2-1024x680.jpg"
@@ -72,7 +89,9 @@
           </div>
 
           <div class="top-products-text">
-            <b><div class="top-products-title">{{ frias.titulo}}</div> </b>
+            <b
+              ><div class="top-products-title">{{ frias.titulo }}</div>
+            </b>
             <div class="top-products-title">{{ frias.descripcion }}</div>
             <div class="top-products-price">Q {{ frias.precio }}.00</div>
           </div>
@@ -83,13 +102,13 @@
     </div>
 
     <!--BEBIDAS CALIENTES-->
-    <h2>Bebidas Calientes</h2>
+    <h2 id="indice2">Bebidas Calientes</h2>
     <div class="scroll-menu">
       <!--modificar-->
       <div class="scroll-content">
         <div
           :key="indice"
-          v-for="(bCaliente,indice) in bCalientes"
+          v-for="(bCaliente, indice) in bCalientes"
           class="top-products"
         >
           <div class="top-products-img">
@@ -100,7 +119,9 @@
           </div>
 
           <div class="top-products-text">
-            <b><div class="top-products-title">{{ bCaliente.titulo}}</div> </b>
+            <b
+              ><div class="top-products-title">{{ bCaliente.titulo }}</div>
+            </b>
             <div class="top-products-title">{{ bCaliente.descripcion }}</div>
             <div class="top-products-price">Q.{{ bCaliente.precio }}.00</div>
           </div>
@@ -115,7 +136,11 @@
     <div class="scroll-menu">
       <!--modificar-->
       <div class="scroll-content">
-        <div :key="indice" v-for="(desayuno,indice) in desayunos" class="top-products">
+        <div
+          :key="indice"
+          v-for="(desayuno, indice) in desayunos"
+          class="top-products"
+        >
           <div class="top-products-img">
             <img
               src="https://donaluisaxicotencatl.com/wp-content/uploads/2020/09/Dona-Luisa-Xicotencatl-Cafe-1024x736.jpg"
@@ -141,7 +166,7 @@
     <div class="scroll-menu">
       <!--modificar-->
       <div class="scroll-content">
-        <div :key="indice" v-for="(sopa,indice) in sopas" class="top-products">
+        <div :key="indice" v-for="(sopa, indice) in sopas" class="top-products">
           <div class="top-products-img">
             <img
               src="https://donaluisaxicotencatl.com/wp-content/uploads/2020/09/Dona-Luisa-Xicotencatl-Cafe-1024x736.jpg"
@@ -169,7 +194,7 @@
       <div class="scroll-content">
         <div
           :key="indice"
-          v-for="(infantil,indice) in infantiles"
+          v-for="(infantil, indice) in infantiles"
           class="top-products"
         >
           <div class="top-products-img">
@@ -193,13 +218,13 @@
     </div>
 
     <!--SANDWICHES-->
-    <h2>Sandwiches</h2>
+    <h2 id="indice3">Sandwiches</h2>
     <div class="scroll-menu">
       <!--modificar-->
       <div class="scroll-content">
         <div
           :key="indice"
-          v-for="(sandwich,indice) in sandwiches"
+          v-for="(sandwich, indice) in sandwiches"
           class="top-products"
         >
           <div class="top-products-img">
@@ -210,9 +235,11 @@
           </div>
 
           <div class="top-products-text">
-            <b><div class="top-products-title">{{ sandwich.titulo }}</div></b>
-            <div class="top-products-title">{{sandwich.descripcion}}</div>
-            <div class="top-products-price">Q{{sandwich.precio}}.00</div>
+            <b
+              ><div class="top-products-title">{{ sandwich.titulo }}</div></b
+            >
+            <div class="top-products-title">{{ sandwich.descripcion }}</div>
+            <div class="top-products-price">Q{{ sandwich.precio }}.00</div>
           </div>
 
           <i class="bx bx-plus-medical"></i>
@@ -227,7 +254,7 @@
       <div class="scroll-content">
         <div
           :key="indice"
-          v-for="(hamburguesa,indice) in hamburguesas"
+          v-for="(hamburguesa, indice) in hamburguesas"
           class="top-products"
         >
           <div class="top-products-img">
@@ -255,7 +282,11 @@
     <div class="scroll-menu">
       <!--modificar-->
       <div class="scroll-content">
-        <div :key="indice" v-for="(papas_rellena,indice) in papas_rellenas" class="top-products">
+        <div
+          :key="indice"
+          v-for="(papas_rellena, indice) in papas_rellenas"
+          class="top-products"
+        >
           <div class="top-products-img">
             <img
               src="https://donaluisaxicotencatl.com/wp-content/uploads/2020/09/Dona-Luisa-Xicotencatl-Cafe-1024x736.jpg"
@@ -265,8 +296,13 @@
 
           <div class="top-products-text">
             <b>
-            <div class="top-products-title">{{ papas_rellena.titulo }}</div></b>
-            <div class="top-products-title">{{ papas_rellena.descripcion }}</div>
+              <div class="top-products-title">
+                {{ papas_rellena.titulo }}
+              </div></b
+            >
+            <div class="top-products-title">
+              {{ papas_rellena.descripcion }}
+            </div>
             <div class="top-products-price">Q{{ papas_rellena.precio }}.00</div>
           </div>
 
@@ -276,11 +312,15 @@
     </div>
 
     <!--POSTRES-->
-    <h2>Postres</h2>
+    <h2 id="indice4">Postres</h2>
     <div class="scroll-menu">
       <!--modificar-->
       <div class="scroll-content">
-        <div :key="indice" v-for="(postre,indice) in postres" class="top-products">
+        <div
+          :key="indice"
+          v-for="(postre, indice) in postres"
+          class="top-products"
+        >
           <div class="top-products-img">
             <img
               src="https://donaluisaxicotencatl.com/wp-content/uploads/2020/09/Dona-Luisa-Xicotencatl-Cafe-1024x736.jpg"
@@ -289,7 +329,9 @@
           </div>
 
           <div class="top-products-text">
-            <b><div class="top-products-title">{{ postre.titulo }}</div></b>
+            <b
+              ><div class="top-products-title">{{ postre.titulo }}</div></b
+            >
             <div class="top-products-title">{{ postre.descripcion }}</div>
             <div class="top-products-price">Q{{ postre.precio }}.00</div>
           </div>
@@ -304,7 +346,11 @@
     <div class="scroll-menu">
       <!--modificar-->
       <div class="scroll-content">
-        <div :key="indice" v-for="(helado,indice) in helados" class="top-products">
+        <div
+          :key="indice"
+          v-for="(helado, indice) in helados"
+          class="top-products"
+        >
           <div class="top-products-img">
             <img
               src="https://donaluisaxicotencatl.com/wp-content/uploads/2020/09/Dona-Luisa-Xicotencatl-Cafe-1024x736.jpg"
@@ -313,9 +359,11 @@
           </div>
 
           <div class="top-products-text">
-            <b><div class="top-products-title">{{ helado.titulo}}</div> </b>
-            <div class="top-products-title">{{ helado.descripcion}}</div>
-            <div class="top-products-price">Q{{ helado.precio}}.00</div>
+            <b
+              ><div class="top-products-title">{{ helado.titulo }}</div>
+            </b>
+            <div class="top-products-title">{{ helado.descripcion }}</div>
+            <div class="top-products-price">Q{{ helado.precio }}.00</div>
           </div>
 
           <i class="bx bx-plus-medical"></i>
@@ -815,11 +863,11 @@ h2 {
     align-items: center;
     margin-top: 20px;
     .img {
-     max-height: 500px;
+      max-height: 500px;
       width: 50%;
       img {
         width: 100%;
-       max-height: 500px;
+        max-height: 500px;
         object-fit: cover;
         border-radius: 10px;
       }
