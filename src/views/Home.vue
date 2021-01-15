@@ -30,7 +30,7 @@
         <!--cambiar la imagen-->
         <div class="img">
           <img
-            src="https://donaluisaxicotencatl.com/wp-content/uploads/2020/09/Hamburguesa-de-Dona-Luisa-Xicotencatl-1024x643.jpg"
+            src="https://images.unsplash.com/photo-1552718752-c682d315b136?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=845&q=80"
             alt=""
           />
         </div>
@@ -63,7 +63,7 @@
       <!--modificar-->
       <div class="scroll-content">
         <!--<div :key="index" v-for="(item, index) in 10" class="top-products">-->
-        <div :key="frias" v-for="frias in bFrias" class="top-products">
+        <div :key="indice" v-for="(frias,indice) in bFrias" class="top-products">
           <div class="top-products-img">
             <img
               src="http://donaluisaxicotencatl.com/wp-content/uploads/2020/09/Menu-Dona-Luisa-Xicotencatl-2-1024x680.jpg"
@@ -88,8 +88,8 @@
       <!--modificar-->
       <div class="scroll-content">
         <div
-          :key="bCaliente"
-          v-for="bCaliente in bCalientes"
+          :key="indice"
+          v-for="(bCaliente,indice) in bCalientes"
           class="top-products"
         >
           <div class="top-products-img">
@@ -115,7 +115,7 @@
     <div class="scroll-menu">
       <!--modificar-->
       <div class="scroll-content">
-        <div :key="desayuno" v-for="desayuno in desayunos" class="top-products">
+        <div :key="indice" v-for="(desayuno,indice) in desayunos" class="top-products">
           <div class="top-products-img">
             <img
               src="https://donaluisaxicotencatl.com/wp-content/uploads/2020/09/Dona-Luisa-Xicotencatl-Cafe-1024x736.jpg"
@@ -141,7 +141,7 @@
     <div class="scroll-menu">
       <!--modificar-->
       <div class="scroll-content">
-        <div :key="sopa" v-for="sopa in sopas" class="top-products">
+        <div :key="indice" v-for="(sopa,indice) in sopas" class="top-products">
           <div class="top-products-img">
             <img
               src="https://donaluisaxicotencatl.com/wp-content/uploads/2020/09/Dona-Luisa-Xicotencatl-Cafe-1024x736.jpg"
@@ -168,8 +168,8 @@
       <!--modificar-->
       <div class="scroll-content">
         <div
-          :key="infantil"
-          v-for="infantil in infantiles"
+          :key="indice"
+          v-for="(infantil,indice) in infantiles"
           class="top-products"
         >
           <div class="top-products-img">
@@ -198,8 +198,8 @@
       <!--modificar-->
       <div class="scroll-content">
         <div
-          :key="sandwich"
-          v-for="sandwich in sandwiches"
+          :key="indice"
+          v-for="(sandwich,indice) in sandwiches"
           class="top-products"
         >
           <div class="top-products-img">
@@ -226,8 +226,8 @@
       <!--modificar-->
       <div class="scroll-content">
         <div
-          :key="hamburguesa"
-          v-for="hamburguesa in hamburguesas"
+          :key="indice"
+          v-for="(hamburguesa,indice) in hamburguesas"
           class="top-products"
         >
           <div class="top-products-img">
@@ -255,7 +255,7 @@
     <div class="scroll-menu">
       <!--modificar-->
       <div class="scroll-content">
-        <div :key="papas_rellena" v-for="papas_rellena in papas_rellenas" class="top-products">
+        <div :key="indice" v-for="(papas_rellena,indice) in papas_rellenas" class="top-products">
           <div class="top-products-img">
             <img
               src="https://donaluisaxicotencatl.com/wp-content/uploads/2020/09/Dona-Luisa-Xicotencatl-Cafe-1024x736.jpg"
@@ -280,7 +280,7 @@
     <div class="scroll-menu">
       <!--modificar-->
       <div class="scroll-content">
-        <div :key="postre" v-for="postre in postres" class="top-products">
+        <div :key="indice" v-for="(postre,indice) in postres" class="top-products">
           <div class="top-products-img">
             <img
               src="https://donaluisaxicotencatl.com/wp-content/uploads/2020/09/Dona-Luisa-Xicotencatl-Cafe-1024x736.jpg"
@@ -304,7 +304,7 @@
     <div class="scroll-menu">
       <!--modificar-->
       <div class="scroll-content">
-        <div :key="helado" v-for="helado in helados" class="top-products">
+        <div :key="indice" v-for="(helado,indice) in helados" class="top-products">
           <div class="top-products-img">
             <img
               src="https://donaluisaxicotencatl.com/wp-content/uploads/2020/09/Dona-Luisa-Xicotencatl-Cafe-1024x736.jpg"
@@ -760,6 +760,7 @@ h2 {
       background-color: rgba(74, 174, 84);
       margin: 5px;
     }
+    max-width: 150px;
     min-width: 150px;
     .top-products-text {
       margin-top: 10px;
@@ -804,6 +805,7 @@ h2 {
     }
   }
   .combo-header {
+    max-height: 500px;
     background: rgba(74, 174, 84);
     color: white;
     padding: 20px;
@@ -813,9 +815,11 @@ h2 {
     align-items: center;
     margin-top: 20px;
     .img {
+     max-height: 500px;
       width: 50%;
       img {
         width: 100%;
+       max-height: 500px;
         object-fit: cover;
         border-radius: 10px;
       }
@@ -824,9 +828,11 @@ h2 {
       width: 50%;
       h3 {
         font-weight: 400;
+        font-size: 3vw;
       }
       p {
-        font-weight: 300;
+        font-weight: 100;
+        font-size: 3vw;
       }
     }
   }

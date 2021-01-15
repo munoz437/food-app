@@ -16,7 +16,7 @@
           </router-link> holass-->
 
         
-          <router-link to="/usuario">
+          <router-link to="/about">
           <i class='bx bx-user bx-sm' ></i>
           </router-link>
 
@@ -33,12 +33,16 @@
 <style lang="less">
 
 .navbar-container{
+  z-index: 100;
+  background-color: white;
+  
+
   width: 100%;
   position: fixed;
   bottom: 0;
 
   .navbar-content{
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     a{
