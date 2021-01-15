@@ -64,8 +64,12 @@
             <i class="bx bx-cake bx-sm"></i>
           </a>
         </div>
-
         
+        <div class="avatar">
+          <a href="#indice4">
+            <i class="bx bx-cake bx-sm"></i>
+          </a>
+        </div>
 
       </div>
     </div>
@@ -825,7 +829,7 @@ h2 {
 
   .scroll-menu {
     margin-top: 10px;
-
+  
     .scroll-content {
       display: flex;
       overflow-y: auto;
