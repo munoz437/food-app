@@ -7,8 +7,8 @@
             <i class='bx bx-home-alt bx-sm' ></i>
           </router-link>
 
-          <router-link to="/mas">
-          <i class='bx bx-message-square-detail bx-sm' ></i>
+          <router-link to="/about">
+         <i class='bx bx-cart bx-sm'></i>
           </router-link>
           <!--
           <router-link to="/deseos">
@@ -16,7 +16,7 @@
           </router-link> holass-->
 
         
-          <router-link to="/about">
+          <router-link to="/usuario">
           <i class='bx bx-user bx-sm' ></i>
           </router-link>
 
